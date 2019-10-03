@@ -28,6 +28,8 @@
   layoutBrks(el,allBrks,brkPer,opt){
             let contWidth    = el.offsetWidth;
             let brkWidth    = undefined != opt && undefined != opt.elWidth ? opt.elWidth :  null != brkPer ?contWidth*brkPer :allBrks[0].offsetWidth ; 
+
+            console.log(brkWidth);
             let rawBrkMargin = undefined != opt && undefined != opt.elMargin ?  opt.elMargin : 0;
             let rawBrkPerRow = (contWidth-rawBrkMargin )/(brkWidth+rawBrkMargin );
             let brkPerRow = Math.floor(rawBrkPerRow); 
