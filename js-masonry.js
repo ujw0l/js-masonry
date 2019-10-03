@@ -15,7 +15,7 @@
 
         let masArr =  Array.from(document.querySelectorAll(elems));
         masArr.map(el=>{
-                        let allBrks    = undefined != opt && undefined != opt.elSelector ? Array.from(el.querySelectorAll(opt.elSelector))  :  Array.from(el.querySelectorAll('*')); 
+                        let allBrks    = undefined != opt && undefined != opt.elSelector ? Array.from(el.querySelectorAll(opt.elSelector))  :  Array.from(el.children); 
                         if(0 < allBrks.length){
                           let brkPer = undefined != opt && undefined == opt.elWidth  && true === opt.percentWidth ? allBrks[0].offsetWidth/el.offsetWidth: null;    
                           this.layoutBrks(el,allBrks,brkPer,opt);
