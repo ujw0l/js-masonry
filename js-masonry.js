@@ -1,16 +1,14 @@
 /*
  * Js Masonry
  * javascript library to create masnory layout of elements 
- * https://ujwolbastakoti.wordpress.com/
+ * https://ujw0l.github.io/
  * MIT license
  *  
  */
 
-
  'use strict'
  class jsMasonry{
     constructor(elems,opt){
-
         let masArr =  Array.from(document.querySelectorAll(elems));
         masArr.map(el=>{
                         let elFirstChild    = undefined != opt && undefined != opt.elSelector ? el.querySelector(opt.elSelector)  :  el.children[0];
@@ -21,6 +19,13 @@
                         }  
         });
     }
+    /**
+     * 
+     * @param {*} el  Element to apply masonry
+     * @param {*} opt Masonry options
+     * @param {*} brkPer Percent Width
+     * @param {*} resizeEvnt Resize event
+     */
 
   layoutBrks(el,opt,brkPer,resizeEvnt){
             let allBrks    = undefined != opt && undefined != opt.elSelector ? Array.from(el.querySelectorAll(opt.elSelector))  :  Array.from(el.children); 
