@@ -9,15 +9,28 @@
  'use strict'
  class jsMasonry{
     constructor(elems,opt){
+      this.prepMas(elems,opt);  
+    }
+    /**
+     * 
+     * @param {*} elems Elements to apply masonry
+     * @param {*} opt Masonry options
+     */ 
+    prepMas(elems,opt){
         let masArr =  Array.from(document.querySelectorAll(elems));
+        let massApplied = 0;
         masArr.map(el=>{
                         let elFirstChild    = undefined != opt && undefined != opt.elSelector ? el.querySelector(opt.elSelector)  :  el.children[0];
                         if(undefined  != elFirstChild){
                           let brkPer = undefined != opt && undefined == opt.elWidth  && true === opt.percentWidth ? elFirstChild.offsetWidth/el.offsetWidth: null;    
-                          this.layoutBrks(el,opt,brkPer);
+                          this.layBrks(el,opt,brkPer);
+                          massApplied++
                           window.addEventListener('resize',()=>this.layoutBrks(el,opt,brkPer,event));  
                         }  
         });
+        if(1 <  massApplied){
+            window.dispatchEvent(new Event('resize'));
+        } 
     }
     /**
      * 
@@ -26,8 +39,7 @@
      * @param {*} brkPer Percent Width
      * @param {*} resizeEvnt Resize event
      */
-
-  layoutBrks(el,opt,brkPer,resizeEvnt){
+  layBrks(el,opt,brkPer,resizeEvnt){
             let allBrks    = undefined != opt && undefined != opt.elSelector ? Array.from(el.querySelectorAll(opt.elSelector))  :  Array.from(el.children); 
             let contWidth    = el.offsetWidth;
             let brkWidth    = undefined != opt && undefined != opt.elWidth ? opt.elWidth :  undefined != brkPer || null != brkPer ?contWidth*brkPer :allBrks[0].offsetWidth ; 
@@ -47,8 +59,8 @@
                         if( availTop[0] === n[0] && 1 === placeCount){
                             x.style.width = `${brkWidth}px`;
                             x.style.position = 'absolute'; 
-                            x.style.top = `${n[0]}px`;
                             x.style.left = `${n[1]}px`;
+                            x.style.top = `${n[0]}px`;
                             placeCount++;
                             if(x.nodeName.toLowerCase() === 'img'){
                                 x.style.height = '';
@@ -61,19 +73,22 @@
                                 availTop[0] =  n[0]+x.offsetHeight+brkMargin;
                                 availSpots[l] = [n[0]+x.offsetHeight+brkMargin, n[1]]
                                 availTop.sort((a, b)=> a-b);
-                            }   
+                            }
                         }
                     });
 
                     if(i === allBrks.length-1){
                         availTop.sort((a, b)=> b-a);
                         el.style.height =  (availTop[0] - el.offsetTop + rawBrkMargin)+'px';
-                        if(undefined != opt && 'function' == typeof(opt.callback) && undefined == resizeEvnt){
-                            opt.callback(el);
-                        }
-                        if(undefined == brkPer){
-                            window.dispatchEvent(new Event('resize'));
-                        }
+                        if(undefined == resizeEvnt){
+                            if(undefined != opt ) {
+                                if('function' == typeof(opt.callback) ){
+                                    opt.callback(el); 
+                                }  
+                            }else{
+                                window.dispatchEvent(new Event('resize'));
+                            }
+                        }    
                     }
                 }); 
     }
