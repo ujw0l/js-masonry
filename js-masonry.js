@@ -25,7 +25,7 @@
                           let brkPer = undefined != opt && undefined == opt.elWidth  && true === opt.percentWidth ? elFirstChild.offsetWidth/el.offsetWidth: null;    
                           this.layBrks(el,opt,brkPer);
                           massApplied++
-                          window.addEventListener('resize',()=>this.layoutBrks(el,opt,brkPer,event));  
+                          window.addEventListener('resize',()=>this.layBrks(el,opt,brkPer,event));  
                         }  
         });
         if(1 <  massApplied){
