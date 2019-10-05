@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to js-masonry 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ujw0l/js-masonry#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -60,6 +60,8 @@ callBack : Function (Optional, Function to call after all bricks are lay which g
 Note 1 : Initialize carousel inside script tag on window onload or footer.
 Note 2 : If multiple masnory is layed each will get respective element object as callback parameter.
 Note 3 : To apply masonry after adding  bricks apply mas.layBrks(el), where el is object (see querySelector)
+
+```
 ## Author
 
 👤 **ujw0l**

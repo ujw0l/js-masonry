@@ -62,9 +62,9 @@
                             x.style.left = `${n[1]}px`;
                             x.style.top = `${n[0]}px`;
                             placeCount++;
-                            if(x.nodeName.toLowerCase() === 'img'){
+                            if('img' === x.nodeName.toLowerCase()){
                                 x.style.height = '';
-                            let  brkHt = brkWidth/ x.offsetWidth * x.offsetHeight;
+                                let  brkHt = brkWidth/ x.offsetWidth * x.offsetHeight;
                                 x.style.height = `${brkHt}px`;
                                 availTop[0] =  n[0]+brkHt+brkMargin;
                                 availSpots[l] = [n[0]+brkHt+brkMargin, n[1]]
