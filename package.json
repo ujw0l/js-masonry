@@ -1,0 +1,24 @@
+{
+  "name": "js-masonry",
+  "version": "1.0.0",
+  "description": "Vanilla Js library to  lay elements in masonry grid in optimal positions and auto adjust margin between bricks",
+  "main": "js-masonry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ujw0l/js-masonry.git"
+  },
+  "keywords": [
+    "masonry",
+    "auto-adjust-margin",
+    "lay-multiple-masonry"
+  ],
+  "author": "ujw0l",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ujw0l/js-masonry/issues"
+  },
+  "homepage": "https://ujw0l.github.io/js-masonry"
+}

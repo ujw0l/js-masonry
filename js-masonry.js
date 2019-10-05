@@ -76,7 +76,6 @@
                             }
                         }
                     });
-
                     if(i === allBrks.length-1){
                         availTop.sort((a, b)=> b-a);
                         el.style.height =  (availTop[0] - el.offsetTop + rawBrkMargin)+'px';
@@ -86,7 +85,7 @@
                                     opt.callback(el); 
                                 }  
                             }else{
-                                window.dispatchEvent(new Event('resize'));
+                                    window.dispatchEvent(new Event('resize'));
                             }
                         }    
                     }
