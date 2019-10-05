@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> Vanilla Js library to  lay elements in masonry grid in optimal positions and ehich auto adjusts margin between bricks based on residual space
+> Vanilla Js library to  lay elements in masonry grid in optimal positions and which auto adjusts margin between bricks based on residual space
 
 ### 🏠 [Homepage](https://ujw0l.github.io/js-masonry)
 
