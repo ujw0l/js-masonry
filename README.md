@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to js-masonry 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ujw0l/js-masonry#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -10,8 +10,8 @@
   <a href="https://github.com/ujw0l/js-masonry/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/bktujwol" target="_blank">
-    <img alt="Twitter: bktujwol" src="https://img.shields.io/twitter/follow/bktujwol.svg?style=social" />
+  <a href="https://twitter.com/BastakotiUjwol" target="_blank">
+    <img alt="Twitter: bktujwol" src="https://img.shields.io/twitter/follow/BastakotiUjwol.svg?style=social" />
   </a>
 </p>
 
@@ -64,7 +64,7 @@ Note 3 : To apply masonry after adding  bricks apply mas.layBrks(el), where el i
 
 👤 **ujw0l**
 
-* Twitter: [@bktujwol](https://twitter.com/bktujwol)
+* Twitter: [@bktujwol](https://twitter.com/BastakotiUjwol)
 * Github: [@ujw0l](https://github.com/ujw0l)
 
 ## 🤝 Contributing

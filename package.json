@@ -1,6 +1,6 @@
 {
   "name": "js-masonry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vanilla Js library to  lay elements in masonry grid in optimal positions and auto adjust margin between bricks",
   "main": "js-masonry.js",
   "scripts": {
