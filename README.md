@@ -22,7 +22,7 @@
 ## Install
 
 ```sh
-npm install
+npm install js-masonry
 ```
 
 ## Script Tag
