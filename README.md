@@ -41,6 +41,7 @@ const mas = new jsMasonry('selector/s',
                                         elSelector: string, 
                                         elWidth:number, 
                                         elMargin:number, 
+                                        heightSort:string,
                                         percentWidth:boolean, 
                                         callBack : function
                                         })
@@ -51,6 +52,7 @@ Second Parameter :
 
 elSelector : String, (Optional, Element to be used as base brick default first element)
 elWidth : Number, (Optional, Width for bricks, deafult elSelector or first element width )
+heightSort:string,('ASC' for ascending height, 'DESC' for descending,do not set for as it is)
 elMargin : Number, (Optional, Minimum hotizontal and vertical margin between bricks)
 percentWidth : Boolen, (Optional, Use percent width set with CSS, deafult:true, Note: do not use elSelector)
 callBack : Function (Optional, Function to call after all bricks are lay which get selected element object as parameter1)
