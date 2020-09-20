@@ -1,7 +1,7 @@
 {
   "name": "js-masonry",
-  "version": "1.0.3",
-  "description": "Vanilla Js library to  lay elements in masonry grid in optimal positions and auto adjust margin between bricks",
+  "version": "1.1.0",
+  "description": "Js library to  lay elements in masonry grid in optimal positions and auto adjust margin between bricks with option to height sort",
   "main": "js-masonry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
